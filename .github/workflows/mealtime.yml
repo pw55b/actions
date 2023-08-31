@@ -1,7 +1,7 @@
 name: Scheduled POST Request
 on:
   schedule:
-    - cron: "20 3 * * *"
+    - cron: "30 3 * * *"
 jobs:
   send-request:
     runs-on: ubuntu-latest
