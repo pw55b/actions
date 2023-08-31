@@ -1,0 +1,14 @@
+name: notify_offduty
+on:
+  schedule:
+    - cron: "55 9 * * *"
+
+jobs:
+  send-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send POST Request
+        env:
+          MY_KEY: ${{ secrets.WECHATBOTKEY }}
+        run: |
+          curl "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${{ secrets.WECHATBOTKEY }}" -H 'Content-Type: application/json' -d '{"msgtype":"text","text":{"content": "准备下班！！!"}}'
