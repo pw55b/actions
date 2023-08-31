@@ -1,4 +1,4 @@
-name: notify_offduty
+name: notify_mealtime
 on:
   schedule:
     - cron: "20 3 * * *"
