@@ -11,4 +11,4 @@ jobs:
         env:
           MY_KEY: ${{ secrets.WECHATBOTKEY }}
         run: |
-          curl "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${{ secrets.WECHATBOTKEY }}" -H 'Content-Type: application/json' -d '{"msgtype":"text","text":{"content": "准备下班！！!"}}'
+          curl "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${{ secrets.WECHATBOTKEY }}" -H 'Content-Type: application/json' -d '{"msgtype":"text","text":{"content": "准备下班🚀"}}'
