@@ -1,0 +1,11 @@
+name: Scheduled POST Request
+on:
+  schedule:
+    - cron: "20 3 * * *"
+jobs:
+  send-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send POST Request
+        run: |
+          curl "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${{ secrets.WECHATBOTKEY }}" -H 'Content-Type: application/json' -d '{"msgtype":"text","text":{"content": "干饭时间！"}}'
